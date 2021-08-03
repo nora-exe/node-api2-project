@@ -68,6 +68,8 @@ describe('server.js', () => {
       expect(res.body.message).toMatch(/does not exist/i)
     }, 500)
   })
+
+  // re-evaluate test expectations for POST, PUT, DELETE
   describe('3 [POST] /api/posts', () => {
     it('responds with a 201', async () => {
       const res = await request(server).post('/api/posts').send(post1)
